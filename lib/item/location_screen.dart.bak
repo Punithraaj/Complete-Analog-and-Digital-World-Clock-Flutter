@@ -12,12 +12,12 @@ class LocationList extends StatefulWidget {
 }
 
 class _LocationListState extends State<LocationList> {
-  List<String> timezoneList = [];
+  List<String> timzoneList = [];
   final myController = TextEditingController();
   @override
   void initState() {
     // TODO: implement initState
-    timezoneList = getTimeZoneLocation();
+    timzoneList = getTimeZoneLocation();
 
     super.initState();
   }
@@ -89,7 +89,7 @@ class _LocationListState extends State<LocationList> {
     if (!searchValue.isEmpty) {
       finalList = getSearchTimeZoneList(searchValue);
     } else {
-      finalList = timezoneList;
+      finalList = timzoneList;
     }
 
     List<Padding> listView = [];
@@ -121,7 +121,7 @@ class _LocationListState extends State<LocationList> {
   }
 
   List getSearchTimeZoneList(String searchValue) {
-    return timezoneList
+    return timzoneList
         .where((element) => element.toLowerCase().contains(searchValue))
         .toList();
   }
